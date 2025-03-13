@@ -130,6 +130,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+        <h1 className='title-top-cards'>Top coins</h1>
       </div>
       <CardsCarousel coins={coinsData} />
     </div>

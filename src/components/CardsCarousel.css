@@ -1,8 +1,7 @@
 .cards-carousel {
   position: absolute;
   left: 355px; /* Отступ от левого края */
-  top: 500px;
-  z-index: 2;
+  top: 525px;
   width: calc(100% - 355px);
   overflow-x: hidden;
 }
@@ -69,7 +68,7 @@
 
 @media (max-width: 1260px) {
   .cards-carousel {
-    top: 790px;
+    top: 820px;
   }
 }
 
@@ -136,7 +135,7 @@
   .cards-carousel {
     left: 30px;
     gap: 40%;
-    width: calc(100% - 20px);
+    width: calc(100% - 30px);
   }
 }
 
@@ -144,6 +143,14 @@
   .cards-carousel {
     left: 30px;
     gap: 40%;
-    width: calc(100% - 0px);
+    width: calc(90%);
+  }
+}
+
+@media (max-width: 340px) {
+  .cards-carousel {
+    left: 30px;
+    gap: 40%;
+    width: 340px;
   }
 }

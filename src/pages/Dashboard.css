@@ -5,6 +5,13 @@
   left: 355px;
 }
 
+.title-top-cards {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 300;
+  padding-top: 18px;
+}
+
 .prices {
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +19,7 @@
 .title-prices {
   color: #a1a1a1;
   font-weight: 300;
+  font-size: 16px;
 }
 .cards-prices {
   display: flex;
