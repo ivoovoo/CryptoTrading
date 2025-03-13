@@ -173,7 +173,6 @@
 @media (max-width: 480px) {
   .portfolio-content {
     left: 30px;
-    width: calc(320px + 10%);
-    padding-right: 20px;
+    width: calc(320px + 8%);
   }
 }
