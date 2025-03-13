@@ -239,7 +239,7 @@
 
   .background-video {
     width: 195px;
-    height: 260px;
+    height: 208px;
     border-radius: 20px;
   }
 
@@ -276,7 +276,7 @@
     height: 72px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    bottom: -8px;
+    bottom: -0px;
     padding: 8px 10px;
   }
 
@@ -295,7 +295,7 @@
   .cards-carousel2 {
     left: 30px;
     gap: 40%;
-    width: calc(100% - 20px);
+    width: calc(100% - 25px);
   }
   .title-release {
     left: 30px;
