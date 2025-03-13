@@ -289,6 +289,15 @@
   .times-card-release {
     font-size: 10px;
   }
+
+  .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 2;
+    right: 8px;
+    top: 270px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -296,6 +305,7 @@
     left: 30px;
     gap: 40%;
     width: calc(100% - 30px);
+    padding-bottom: 20px;
   }
   .title-release {
     left: 30px;

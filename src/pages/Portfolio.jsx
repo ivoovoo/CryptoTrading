@@ -144,6 +144,62 @@ const Portfolio = () => {
           <div className='allocation-stat'>Allocation</div>
           <div className='statistics-stat'>Statistics</div>
         </div>
+        <div className='coins-charts'>
+          <div>
+            <div className='Tether-chart'></div>
+          </div>
+          <div className='Sushi-charts'>
+            <div className='Sushi-chart'></div>
+            <div className='Sushi-chart'></div>
+            <div className='Sushi-chart'></div>
+            <div className='Sushi-chart'></div>
+            <div className='Sushi-chart'></div>
+          </div>
+          <div className='Bitcoin-charts'>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+            <div className='Bitcoin-chart'></div>
+          </div>
+        </div>
+        <div className='coins-chart-precent'>
+          <div className='coin-chart-precent1'>
+            <div className='circle-coin-chart1'></div>
+            <div className='coin-name-precent'>Tether</div>
+            <div className='coin-precent'>35.02%</div>
+          </div>
+          <div className='coin-chart-precent2'>
+            <div className='circle-coin-chart2'></div>
+            <div className='coin-name-precent'>Tether</div>
+            <div className='coin-precent'>35.02%</div>
+          </div>
+          <div className='coin-chart-precent3'>
+            <div className='circle-coin-chart3'></div>
+            <div className='coin-name-precent'>Tether</div>
+            <div className='coin-precent'>35.02%</div>
+          </div>
+        </div>
+        <h1 className='your-holdings'>Your holdings</h1>
         <TablePortfolio data={data} />
       </div>
     </div>
