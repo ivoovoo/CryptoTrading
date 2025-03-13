@@ -486,6 +486,7 @@
   .content-academy {
     left: 40px;
     width: calc(100% - 135px);
+    padding-top: 0px;
   }
 
   .live-Now {
@@ -637,6 +638,7 @@
     left: 29px;
     width: calc(100% - 135px);
     gap: 40%;
+    padding-top: 0px;
   }
 
   .live-Now {
@@ -747,11 +749,6 @@
     width: 208px;
     height: 300px;
     margin-top: 10px;
-  }
-
-  .content-academy {
-    padding-top: 31px;
-    gap: 30px;
   }
 
   .energy-img {
