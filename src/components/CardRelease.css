@@ -154,8 +154,66 @@
     left: 60px;
     width: calc(100% - 60px);
   }
+
   .title-release {
     left: 60px;
+  }
+
+  .card-release {
+    height: 258px;
+    width: 225px;
+  }
+
+  .background-video {
+    width: 225px;
+    height: 260px;
+  }
+
+  .title-cards-release {
+    font-size: 23px;
+    margin: 10px 0px;
+    padding-bottom: 10px;
+  }
+
+  .btn-card-beginner,
+  .btn-card-advance {
+    right: 8px;
+    top: 10px;
+    padding: 7px 11px;
+    margin-top: 10px;
+    font-size: 11px;
+  }
+
+  .play-card-release {
+    top: 34%;
+    left: 51%;
+    width: 45px;
+    height: 45px;
+    padding-left: 15px;
+  }
+
+  .play-card-release img {
+    width: 18px;
+    padding-top: 2px;
+  }
+
+  .card-release-content {
+    width: 224.2px;
+    height: 95px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    bottom: 0;
+    padding: 15px 14px;
+  }
+
+  .title-card-release {
+    font-size: 14px;
+    width: 182px;
+    padding-bottom: 12px;
+  }
+
+  .times-card-release {
+    font-size: 12px;
   }
 }
 
@@ -167,6 +225,69 @@
 
   .title-release {
     left: 40px;
+  }
+
+  .title-release {
+    left: 60px;
+  }
+
+  .card-release {
+    height: 208px;
+    width: 195px;
+    border-radius: 20px;
+  }
+
+  .background-video {
+    width: 195px;
+    height: 260px;
+    border-radius: 20px;
+  }
+
+  .title-cards-release {
+    font-size: 23px;
+    margin: 10px 0px;
+    padding-bottom: 10px;
+  }
+
+  .btn-card-beginner,
+  .btn-card-advance {
+    right: 8px;
+    top: 25px;
+    padding: 7px 11px;
+    margin-top: 10px;
+    font-size: 9px;
+  }
+
+  .play-card-release {
+    top: 42%;
+    left: 51%;
+    width: 38px;
+    height: 38px;
+    padding-left: 13px;
+  }
+
+  .play-card-release img {
+    width: 16px;
+    padding-top: 0px;
+  }
+
+  .card-release-content {
+    width: 194.2px;
+    height: 72px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    bottom: -8px;
+    padding: 8px 10px;
+  }
+
+  .title-card-release {
+    font-size: 11px;
+    width: 182px;
+    padding-bottom: 12px;
+  }
+
+  .times-card-release {
+    font-size: 10px;
   }
 }
 

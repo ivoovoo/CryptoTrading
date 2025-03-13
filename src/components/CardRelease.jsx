@@ -36,7 +36,7 @@ const CardRelease = ({ content }) => {
       >
         {content.map(data => (
           <SwiperSlide key={data.id} className={`card-release ${loaded ? 'loaded' : ''}`}>
-            <img src={data.image} alt='Card' />
+            <img className='background-video' src={data.image} alt='Card' />
             <button
               className={data.level === 'Beginner' ? 'btn-card-beginner' : 'btn-card-advance'}
             >

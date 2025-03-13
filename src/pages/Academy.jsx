@@ -79,7 +79,7 @@ const Academy = () => {
         <div className='live-Now'>
           <h1 className='title-cards-release'>Live Now</h1>
           <div className='laptop'>
-            <img src='/img/laptop.svg' alt='' />
+            <img className='laptop-img' src='/img/laptop.svg' alt='' />
 
             <div className='audio-content'>
               <div className='top-audio'>
@@ -102,7 +102,7 @@ const Academy = () => {
               </div>
               <div className='audio-track'>
                 <div className='audio'>
-                  <img className='audio-sound' src='/img/audio1.svg' alt='' />
+                  <img className='audio-sound1' src='/img/audio1.svg' alt='' />
                   <img className='audio-sound' src='/img/audio2.svg' alt='' />
                   <img className='audio-sound' src='/img/audio2.svg' alt='' />
                   <img className='audio-sound' src='/img/audio2.svg' alt='' />

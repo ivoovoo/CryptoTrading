@@ -131,7 +131,6 @@
 @media (max-width: 480px) {
   .Watchlist-content {
     left: 30px;
-    width: calc(320px + 15%);
-    padding-right: 20px;
+    width: calc(320px + 10%);
   }
 }
