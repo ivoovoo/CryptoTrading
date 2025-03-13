@@ -214,8 +214,8 @@ header {
 
 @media (max-width: 480px) {
   header {
-    left: 30px;
-    width: calc(100% - 205px);
+    left: 60px;
+    width: calc(100% - 235px);
     gap: 40%;
   }
 

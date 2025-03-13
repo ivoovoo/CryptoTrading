@@ -103,7 +103,8 @@
 
 .logo {
   width: 34px;
-  padding-bottom: 67px;
+  padding-bottom: 47px;
+  padding-top: 20px;
   cursor: pointer;
 }
 
@@ -115,10 +116,10 @@
 .burger-menu {
   display: none;
   position: fixed;
-  top: 20px;
+  top: 12px;
   left: 20px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: none;
   border: none;
   cursor: pointer;
@@ -127,7 +128,7 @@
 
 .burger-line {
   display: block;
-  width: 30px;
+  width: 25px;
   height: 3px;
   background: white;
   margin: 6px 0;
@@ -135,13 +136,13 @@
 }
 
 .burger-line.open:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(10px) rotate(45deg);
 }
 .burger-line.open:nth-child(2) {
   opacity: 0;
 }
 .burger-line.open:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-46deg);
 }
 
 /* Инпут в боковом меню */
