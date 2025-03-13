@@ -212,14 +212,14 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 490px) {
   .prices-block {
     gap: 40%;
     left: 20px;
   }
 
   .card-prices {
-    width: 350px;
+    width: 340px;
     height: 260px;
     background-color: #151718;
     border-radius: 35px;
@@ -229,12 +229,12 @@
   .top-card-prices {
     display: flex;
     justify-content: space-between;
-    width: 300px;
+    width: 290px;
   }
 
   .coin-trending {
     display: flex;
-    width: 320px;
+    width: 310px;
     height: 56px;
     background-color: #212325;
     border-radius: 30px;
