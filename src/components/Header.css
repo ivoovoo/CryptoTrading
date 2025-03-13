@@ -215,7 +215,7 @@ header {
 @media (max-width: 480px) {
   header {
     left: 60px;
-    width: calc(100% - 235px);
+    width: calc(100% - 280px);
     gap: 40%;
   }
 
@@ -225,8 +225,8 @@ header {
 
   .header-user {
     width: 180px;
-    margin-right: 20px;
-    padding-right: 20px;
+    margin-right: 0px;
+    padding-right: 0px;
   }
 
   .title-page {
