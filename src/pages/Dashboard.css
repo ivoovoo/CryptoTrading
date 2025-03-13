@@ -1,0 +1,239 @@
+.prices-block {
+  padding-top: 92px;
+  padding-bottom: 50px;
+  position: absolute;
+  left: 355px;
+}
+
+.prices {
+  display: flex;
+  flex-wrap: wrap;
+}
+.title-prices {
+  color: #a1a1a1;
+  font-weight: 300;
+}
+.cards-prices {
+  display: flex;
+  gap: 18px;
+}
+.card-prices {
+  width: 551px;
+  height: 276px;
+  background-color: #151718;
+  border-radius: 35px;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+.trending-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 300;
+}
+.coin-trending {
+  display: flex;
+  width: 519px;
+  height: 56px;
+  background-color: #212325;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 15px;
+  box-sizing: border-box;
+  margin-bottom: 7px;
+}
+
+.top-card-prices {
+  display: flex;
+  justify-content: space-between;
+  width: 505px;
+}
+
+.price-card-prices {
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.index-coin {
+  color: #fff;
+}
+.img-coin {
+  width: 24px;
+  padding-left: 12px;
+  padding-right: 10px;
+}
+.name-coin-prices {
+  color: #fff;
+  padding-right: 5px;
+}
+
+.seeAll-prices {
+  color: #77ed91;
+  font-size: 14px;
+}
+.subname-coin-prices {
+  font-size: 12px;
+  color: #a1a1a1;
+}
+.precent {
+  color: #2dc24e;
+  font-weight: 300;
+}
+.coin-content {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1468px) {
+  .card-prices {
+    width: 451px;
+    height: 276px;
+    background-color: #151718;
+    border-radius: 35px;
+    padding-left: 16px;
+    box-sizing: border-box;
+  }
+  .top-card-prices {
+    display: flex;
+    justify-content: space-between;
+    width: 405px;
+  }
+
+  .coin-trending {
+    display: flex;
+    width: 419px;
+    height: 56px;
+    background-color: #212325;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    margin-bottom: 7px;
+  }
+}
+
+@media (max-width: 1268px) {
+  .cards-prices {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-prices {
+    width: 651px;
+    height: 276px;
+    background-color: #151718;
+    border-radius: 35px;
+    padding-left: 16px;
+    box-sizing: border-box;
+  }
+  .top-card-prices {
+    display: flex;
+    justify-content: space-between;
+    width: 605px;
+  }
+
+  .coin-trending {
+    display: flex;
+    width: 619px;
+    height: 56px;
+    background-color: #212325;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    margin-bottom: 7px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .prices-block {
+    left: 300px;
+    width: calc(100% - 310px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .prices-block {
+    left: 60px;
+    width: calc(100% - 190px);
+  }
+}
+
+@media (max-width: 768px) {
+  .prices-block {
+    left: 40px;
+    width: calc(100% - 135px);
+  }
+
+  .cards-prices {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .trending-title {
+    font-size: 18px;
+  }
+
+  .card-prices {
+    width: 433px;
+    height: 276px;
+    background-color: #151718;
+    border-radius: 35px;
+    padding-left: 16px;
+    box-sizing: border-box;
+  }
+  .top-card-prices {
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+  }
+
+  .coin-trending {
+    display: flex;
+    width: 400px;
+    height: 56px;
+    background-color: #212325;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    margin-bottom: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prices-block {
+    gap: 40%;
+    left: 20px;
+  }
+
+  .card-prices {
+    width: 350px;
+    height: 260px;
+    background-color: #151718;
+    border-radius: 35px;
+    padding-left: 16px;
+    box-sizing: border-box;
+  }
+  .top-card-prices {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+  }
+
+  .coin-trending {
+    display: flex;
+    width: 320px;
+    height: 56px;
+    background-color: #212325;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+  }
+}

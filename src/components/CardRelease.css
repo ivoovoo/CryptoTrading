@@ -1,0 +1,194 @@
+.card-release {
+  position: relative;
+  height: 278px;
+  width: 265px;
+}
+
+.cards-carousel2 {
+  position: absolute;
+  left: 355px;
+  top: 178px;
+  z-index: 2;
+  width: calc(100% - 355px);
+  overflow-x: hidden;
+}
+
+.title-release {
+  position: absolute;
+  left: 355px;
+  top: 114px;
+  z-index: 200;
+}
+
+.title-cards-release {
+  font-size: 26px;
+  color: #fff;
+  font-weight: 400;
+  margin: 10px 0px;
+  padding-bottom: 10px;
+}
+
+.btn-card-beginner,
+.btn-card-advance {
+  background-color: rgba(0, 0, 0, 0.2);
+  will-change: transform, opacity;
+  position: absolute;
+  right: 13.5px;
+  top: 3px;
+  padding: 7px 12px;
+  backdrop-filter: blur(25px);
+  border-radius: 20px;
+
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.05px;
+  opacity: 0.99;
+  animation: fixRepaint 0.05s linear;
+}
+.btn-card-beginner {
+  color: #77ed91;
+}
+
+.btn-card-advance {
+  color: #ffe773;
+}
+
+.play-card-release {
+  box-sizing: border-box;
+  position: absolute;
+  top: 33%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+  background-color: #77ed91;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.card-release-content {
+  background-color: rgba(0, 0, 0, 0.2);
+  will-change: transform, opacity;
+  box-sizing: border-box;
+  position: absolute;
+  width: 265px;
+  height: 95px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  bottom: 0;
+  backdrop-filter: blur(20px);
+  padding: 15px 14px;
+  opacity: 0.99;
+  animation: fixRepaint 0.05s linear;
+}
+
+.title-card-release {
+  font-size: 14px;
+  color: #fff;
+  width: 182px;
+  padding-bottom: 12px;
+}
+
+.times-card-release {
+  color: #a1a1a1;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-release {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-release.loaded {
+  opacity: 1;
+}
+
+.swiper-button-next {
+  position: absolute;
+  background-color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  z-index: 2;
+  right: 10px;
+  top: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next img {
+  width: 14px;
+  height: 14px;
+}
+
+.swiper-button-next:hover {
+  opacity: 0.8;
+}
+
+@keyframes fixRepaint {
+  from {
+    opacity: 0.99;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cards-carousel2 {
+    left: 300px;
+    width: calc(100% - 200px);
+  }
+  .title-release {
+    left: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards-carousel2 {
+    left: 60px;
+    width: calc(100% - 60px);
+  }
+  .title-release {
+    left: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-carousel2 {
+    left: 40px;
+    width: calc(100% - 40px);
+  }
+
+  .title-release {
+    left: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-carousel2 {
+    left: 30px;
+    gap: 40%;
+    width: calc(100% - 20px);
+  }
+  .title-release {
+    left: 30px;
+  }
+}
+
+@media (max-width: 380px) {
+  .cards-carousel2 {
+    left: 30px;
+    gap: 40%;
+    width: calc(100% - 0px);
+  }
+  .title-release {
+    left: 30px;
+  }
+}
