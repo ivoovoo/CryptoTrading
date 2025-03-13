@@ -489,12 +489,12 @@
   }
 
   .title-quality {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .quality-good,
   .quality-bad {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .button-edit {
@@ -518,12 +518,12 @@
   }
 
   .Tether-chart {
-    width: 80px;
+    width: 90px;
     height: 4px;
   }
 
   .Sushi-chart {
-    width: 10px;
+    width: 11px;
     height: 4px;
   }
 
@@ -532,7 +532,7 @@
   }
 
   .Bitcoin-chart {
-    width: 2.5px;
+    width: 3px;
     height: 4px;
   }
 
@@ -560,10 +560,10 @@
   }
 
   .coin-name-precent {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .coin-precent {
-    font-size: 9px;
+    font-size: 10px;
   }
 }
