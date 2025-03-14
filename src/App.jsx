@@ -21,9 +21,8 @@ function App() {
         <Route path='/Watchlist' element={<Watchlist />} />
         <Route path='/Academy' element={<Academy />} />
         <Route path='/Trading' element={<Trading />} />
-        <Route path='/second' element={<Second />} />
-        <Route path='/home' element={<HomeBlockchain />} />
-        <Route path='/second' element={<Second />} />
+        <Route path='/Second' element={<Second />} />
+        <Route path='/Home' element={<HomeBlockchain />} />
       </Routes>
     </Router>
   )
