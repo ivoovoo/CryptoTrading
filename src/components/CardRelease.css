@@ -7,7 +7,7 @@
 .cards-carousel2 {
   position: absolute;
   left: 355px;
-  top: 178px;
+  top: 155px;
   width: calc(100% - 355px);
   overflow-x: hidden;
 }
@@ -15,7 +15,7 @@
 .title-release {
   position: absolute;
   left: 355px;
-  top: 114px;
+  top: 95px;
 }
 
 .title-cards-release {
@@ -52,7 +52,7 @@
   color: #ffe773;
 }
 
-.play-card-release {
+.pause-card-img {
   box-sizing: border-box;
   position: absolute;
   top: 33%;
@@ -64,7 +64,22 @@
   border-radius: 50%;
   display: flex;
   align-items: center;
-  padding-left: 15px;
+  padding-left: 14.5px;
+}
+
+.play-card-img {
+  box-sizing: border-box;
+  position: absolute;
+  top: 33%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+  background-color: #00000050;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  padding-left: 14.5px;
 }
 
 .card-release-content {
@@ -127,6 +142,67 @@
 
 .swiper-button-next:hover {
   opacity: 0.8;
+}
+
+.play-img {
+  width: 20px;
+  height: 20px;
+}
+
+.play-img {
+  width: 18px;
+  height: 18px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.video-poster {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  border-radius: 22px;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-element {
+  width: 99.5%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 25px;
+}
+
+.play-card-release {
+  transition: opacity 1s ease-in-out;
+}
+
+.play-card-release.fading {
+  opacity: 0.5; /* Полупрозрачная */
+}
+
+.play-card-release.hidden {
+  opacity: 0; /* Полностью исчезает */
+  pointer-events: none; /* Чтобы нельзя было кликнуть */
 }
 
 @keyframes fixRepaint {

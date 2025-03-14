@@ -1,12 +1,13 @@
 header {
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
   left: 355px; /* Сдвигаем хедер сразу после меню */
   top: 12px;
   width: calc(100% - 450px);
-  z-index: 2;
+  z-index: 3;
+  background: #0d0d0df6; /* Полупрозрачный белый */
 }
 
 .title-page {

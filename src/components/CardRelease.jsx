@@ -10,14 +10,24 @@ import './CardRelease.css'
 const CardRelease = ({ content }) => {
   const [loaded, setLoaded] = useState(false)
   const swiperRef = useRef(null)
+  const videoRefs = useRef([]) // Ссылки на видео
+  const [playingVideo, setPlayingVideo] = useState(null) // Текущее воспроизводимое видео
 
   useEffect(() => {
-    setTimeout(() => setLoaded(true), 50) // Даем браузеру время на рендеринг
+    setTimeout(() => setLoaded(true), 50)
   }, [])
 
-  // Функция для прокрутки вправо
-  const handleNext = () => {
-    swiperRef.current.swiper.slideNext()
+  // Функция Play/Pause
+  const togglePlay = index => {
+    const video = videoRefs.current[index]
+
+    if (playingVideo === index) {
+      video.pause()
+      setPlayingVideo(null) // Останавливаем видео
+    } else {
+      video.play()
+      setPlayingVideo(index) // Запоминаем текущее видео
+    }
   }
 
   return (
@@ -34,17 +44,42 @@ const CardRelease = ({ content }) => {
         modules={[FreeMode, Pagination]}
         className='cards-carousel2'
       >
-        {content.map(data => (
+        {content.map((data, index) => (
           <SwiperSlide key={data.id} className={`card-release ${loaded ? 'loaded' : ''}`}>
-            <img className='background-video' src={data.image} alt='Card' />
-            <button
-              className={data.level === 'Beginner' ? 'btn-card-beginner' : 'btn-card-advance'}
-            >
-              {data.level}
-            </button>
-            <button className='play-card-release'>
-              <img src='/img/play.svg' alt='Play' />
-            </button>
+            <div className='video-container'>
+              {/* Обертка для видео + постер */}
+              <div className='video-wrapper'>
+                {/* Постер */}
+                <img
+                  src={data.image}
+                  alt='Card Poster'
+                  className={`video-poster ${playingVideo === index ? 'hidden' : ''}`}
+                />
+
+                {/* Видео */}
+                <video
+                  ref={el => (videoRefs.current[index] = el)}
+                  className='video-element'
+                  src={data.video}
+                  onPause={() => setPlayingVideo(null)}
+                />
+              </div>
+
+              {/* Кнопка Play/Pause */}
+              <button
+                className={playingVideo === index ? 'play-card-img' : 'pause-card-img'}
+                onClick={() => togglePlay(index)}
+              >
+                <img
+                  className={playingVideo === index ? 'play-img' : 'pause-img'}
+                  src={
+                    playingVideo === index ? '/img/pause-button-svgrepo-com.svg' : '/img/play.svg'
+                  }
+                  alt='Toggle Play'
+                />
+              </button>
+            </div>
+
             <div className='card-release-content'>
               <div className='title-card-release'>{data.title}</div>
               <div className='times-card-release'>
@@ -55,11 +90,6 @@ const CardRelease = ({ content }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* Кнопка для прокрутки вправо */}
-      <button className='swiper-button-next' onClick={handleNext}>
-        <img src='/img/arrow-down.svg' alt='' />
-      </button>
     </div>
   )
 }
