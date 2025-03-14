@@ -3,6 +3,8 @@ import Header from '../components/Header'
 import TablePortfolio from '../components/TablePortfolio'
 import './Portfolio.css'
 import React from 'react'
+import Menu from '../components/Menu'
+import MenuButtom from '../components/MenuButtom'
 
 const Portfolio = () => {
   const data = [
@@ -86,7 +88,9 @@ const Portfolio = () => {
   ]
 
   return (
-    <div className='container'>
+    <div>
+      <MenuButtom />
+      <Menu />
       <Header title={'Portfolio'}></Header>
       <div className='portfolio-content'>
         <div className='myCoins-block'>

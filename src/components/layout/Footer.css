@@ -1,0 +1,86 @@
+body {
+  font-family: 'Rubik';
+}
+
+footer {
+  background-color: #1e2022;
+  height: 200px;
+  margin-top: 80px;
+}
+
+.about-us-block {
+  width: 256px;
+}
+
+.logo-footer {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+}
+
+.about-us {
+  color: #eff3f9;
+  font-size: 12px;
+  line-height: 18px;
+  padding-bottom: 2px;
+}
+
+.links {
+  display: flex;
+  gap: 33px;
+  padding-top: 4px;
+  padding-right: 55px;
+}
+
+.link {
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.15s ease-in-out;
+}
+
+.link:hover {
+  color: #c8c9ca;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .about-us {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .links {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .link {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .about-us {
+    font-size: 8px;
+    line-height: 16px;
+    width: 140px;
+  }
+
+  .link {
+    font-size: 10px;
+  }
+}

@@ -2,6 +2,8 @@ import React from 'react'
 import Header from '../components/Header'
 import './Academy.css'
 import CardRelease from '../components/CardRelease'
+import Menu from '../components/Menu'
+import MenuButtom from '../components/MenuButtom'
 
 const Academy = () => {
   const cardsData = [
@@ -81,6 +83,8 @@ const Academy = () => {
 
   return (
     <div>
+      <MenuButtom />
+      <Menu />
       <Header title={'Academy'} />
       <CardRelease content={cardsData} />
       <div className='content-academy'>

@@ -2,6 +2,8 @@ import React from 'react'
 import './Dashboard.css'
 import Header from '../components/Header'
 import CardsCarousel from '../components/CardsCarousel'
+import Menu from '../components/Menu'
+import MenuButtom from '../components/MenuButtom'
 
 const Dashboard = () => {
   const trendingCoins = [
@@ -83,6 +85,8 @@ const Dashboard = () => {
 
   return (
     <div>
+      <MenuButtom />
+      <Menu />
       <Header title={'Dashboard'} />
       <div className='prices-block'>
         <h3 className='title-prices'>

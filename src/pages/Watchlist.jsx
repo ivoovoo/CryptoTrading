@@ -2,6 +2,8 @@ import React from 'react'
 import Header from '../components/Header'
 import './Watchlist.css'
 import CryptoTable from '../components/CryptoTable'
+import Menu from '../components/Menu'
+import MenuButtom from '../components/MenuButtom'
 
 const Watchlist = () => {
   const data = [
@@ -126,6 +128,8 @@ const Watchlist = () => {
   return (
     <div>
       <Header title={'Watchlist'} />
+      <Menu />
+      <MenuButtom />
       <div className='Watchlist-content'>
         <div className='myCoins-block'>
           <div className='primary-block'>

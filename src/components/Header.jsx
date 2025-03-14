@@ -4,7 +4,7 @@ const Header = ({ title, isMobile }) => {
   return (
     <div>
       <div className='background-header'></div>
-      <header>
+      <header className='header'>
         <div className='name-page'>
           <div className='title-page'>{title}</div>
           <div className='updatedOn'>
@@ -15,7 +15,7 @@ const Header = ({ title, isMobile }) => {
           {!isMobile && ( // Показываем инпут в хедере, только если экран > 768px
             <div className='search-block'>
               <input className='search-input' type='text' placeholder='Search your coins...' />
-              <button className='search-button'>
+              <button className='search-button2'>
                 <img src='/img/search.svg' className='search-img' alt='' />
               </button>
             </div>
