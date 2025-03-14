@@ -60,6 +60,17 @@ const CardRelease = ({ content }) => {
     }
   }
 
+  // Функция для обновления состояния слайдера при смене слайда
+  const handleSlideChange = () => {
+    if (playingVideo !== null) {
+      const video = videoRefs.current[playingVideo]
+      if (video) {
+        video.pause() // Ставим видео на паузу при смене слайда
+        setPlayingVideo(null) // Сбрасываем текущее воспроизводимое видео
+      }
+    }
+  }
+
   return (
     <div>
       <div className='title-release'>
@@ -73,6 +84,7 @@ const CardRelease = ({ content }) => {
         pagination={{ clickable: true }}
         modules={[FreeMode, Pagination]}
         className='cards-carousel2'
+        onSlideChange={handleSlideChange} // Слушаем смену слайда
       >
         {content.map((data, index) => (
           <SwiperSlide key={data.id} className={`card-release ${loaded ? 'loaded' : ''}`}>
