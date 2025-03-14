@@ -6,8 +6,8 @@ const HeaderChain = () => {
   const navigate = useNavigate()
 
   return (
-    <header>
-      <a className='logo-header' onClick={() => navigate('/Home')}>
+    <header className='header2'>
+      <a className='logo-header' onClick={() => navigate('/Wallet')}>
         <b>Q</b> BLOCKCHAIN
       </a>
       <nav>
@@ -22,7 +22,7 @@ const HeaderChain = () => {
             <a href='#'>Transactions</a>
           </li>
         </ul>
-        <button onClick={() => navigate('/second')} className='button-header'>
+        <button onClick={() => navigate('/Profile')} className='button-header'>
           Explorer
         </button>
       </nav>

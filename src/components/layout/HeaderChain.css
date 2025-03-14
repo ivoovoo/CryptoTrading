@@ -7,7 +7,7 @@ li {
   letter-spacing: 0.02em;
 }
 
-header {
+.header2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,24 +15,24 @@ header {
   height: 80px;
 }
 
-header nav {
+.header2 nav {
   display: flex;
   align-items: center;
 }
 
-header ul {
+.header2 ul {
   display: flex;
   gap: 33px;
   padding-right: 4.9rem;
 }
 
-header nav a {
+.header2 nav a {
   color: #000;
   font-size: 14px;
   transition: all 0.15s ease-in-out;
 }
 
-header nav a:hover {
+.header2 nav a:hover {
   color: #22448f;
 }
 
@@ -77,7 +77,7 @@ header nav a:hover {
     padding: 0 10px;
   }
 
-  header ul {
+  .header2 ul {
     padding: 0;
     gap: 20px;
     padding-right: 1.3rem;
@@ -93,11 +93,11 @@ header nav a:hover {
     height: 42px;
   }
 
-  header nav a {
+  .header2 nav a {
     font-size: 15px;
   }
 
-  header ul {
+  .header2 ul {
     display: none;
   }
 }
@@ -107,7 +107,7 @@ header nav a:hover {
     padding: 0 10px;
   }
 
-  header ul {
+  .header2 ul {
     gap: 10px;
     padding-right: 0.8rem;
   }
@@ -122,7 +122,7 @@ header nav a:hover {
     font-size: 12px;
   }
 
-  header nav a {
+  .header2 nav a {
     font-size: 12px;
   }
 }
@@ -132,23 +132,23 @@ header nav a:hover {
     padding: 0 10px;
   }
 
-  header ul {
+  .header2 ul {
     gap: 8px;
     font-size: 8px;
     padding-right: 0.5rem;
   }
 
-  header .logo-header {
+  .header2 .logo-header {
     font-size: 14px;
   }
 
-  header .button-header {
+  .header2 .button-header {
     width: 78px;
     height: 33px;
     font-size: 8px;
   }
 
-  header nav a {
+  .header2 nav a {
     font-size: 8px;
   }
 }

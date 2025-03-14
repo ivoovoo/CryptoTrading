@@ -5,23 +5,57 @@ import './Menu.css'
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
+  const [touchStartX, setTouchStartX] = useState(null)
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768)
     }
 
+    const handleClickOutside = event => {
+      if (isOpen && !event.target.closest('.sidebar') && !event.target.closest('.burger-menu')) {
+        setIsOpen(false)
+      }
+    }
+
+    const handleTouchStart = event => {
+      setTouchStartX(event.touches[0].clientX)
+    }
+
+    const handleTouchEnd = event => {
+      if (touchStartX !== null) {
+        const touchEndX = event.changedTouches[0].clientX
+        const swipeDistance = touchEndX - touchStartX
+
+        if (swipeDistance > 50) {
+          setIsOpen(true) // Свайп вправо — открыть меню
+        } else if (swipeDistance < -50) {
+          setIsOpen(false) // Свайп влево — закрыть меню
+        }
+      }
+      setTouchStartX(null)
+    }
+
     window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+    document.addEventListener('click', handleClickOutside)
+    document.addEventListener('touchstart', handleTouchStart)
+    document.addEventListener('touchend', handleTouchEnd)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      document.removeEventListener('click', handleClickOutside)
+      document.removeEventListener('touchstart', handleTouchStart)
+      document.removeEventListener('touchend', handleTouchEnd)
+    }
+  }, [isOpen, touchStartX])
 
   const menuItems = [
-    { name: 'Dashboard', img: '/img/menu.svg', path: '/Dashboard' },
+    { name: 'Dashboard', img: '/img/user.svg', path: '/Dashboard' },
     { name: 'Portfolio', img: '/img/activity.svg', path: '/Portfolio' },
     { name: 'Trading', img: '/img/trade.svg', path: '/Trading' },
     { name: 'Watchlist', img: '/img/eye.svg', path: '/Watchlist' },
     { name: 'Academy', img: '/img/book.svg', path: '/Academy' },
-    { name: 'Profile', img: '/img/user.svg', path: '/Profile' },
+    { name: 'Blockchain', img: '/img/menu.svg', path: '/Profile' },
     { name: 'Wallet', img: '/img/wallet-2.svg', path: '/Wallet' },
   ]
 
@@ -34,9 +68,10 @@ const Menu = () => {
       </button>
 
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-        <img className='logo' src='/img/logo.svg' alt='Logo' />
+        <a className='logo-menu'>
+          <b>Q</b> BLOCKCHAIN
+        </a>
 
-        {/* Инпут будет внутри меню, если экран <= 768px */}
         {isMobile && (
           <div className='search-block'>
             <input className='search-input' type='text' placeholder='Search your coins...' />

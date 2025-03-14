@@ -7,17 +7,17 @@ const MenuBottom2 = () => {
     <div className='menu-bottom'>
       <div className='menu-content'>
         <div className='menu-bottom-button'>
-          <Link to='/second' className='menu-bottom-link'>
+          <Link to='/Wallet' className='menu-bottom-link'>
             BLOCKS
           </Link>
         </div>
         <div className='menu-bottom-button'>
-          <Link to='/home' className='menu-bottom-link'>
+          <Link to='/Profile' className='menu-bottom-link'>
             CHAINS
           </Link>
         </div>
         <div className='menu-bottom-button'>
-          <Link to='/home' className='menu-bottom-link'>
+          <Link to='/Profile' className='menu-bottom-link'>
             TRANSFERS
           </Link>
         </div>

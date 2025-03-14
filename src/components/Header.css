@@ -101,7 +101,7 @@
 /*                             */
 
 @media (max-width: 1200px) {
-  header {
+  .header {
     left: 300px;
     width: calc(100% - 310px);
   }
@@ -112,7 +112,7 @@
 }
 
 @media (max-width: 1024px) {
-  header {
+  .header {
     left: 120px;
     width: calc(100% - 190px);
   }
@@ -175,9 +175,9 @@
 }
 
 @media (max-width: 768px) {
-  header {
+  .header {
     left: 90px;
-    width: calc(100% - 135px);
+    width: calc(100% - 20px);
   }
 
   .background-header {
@@ -241,12 +241,24 @@
   .open-profile-img {
     padding-left: 5px;
   }
+
+  .name-user {
+    display: none;
+  }
+
+  .notifications {
+    display: none;
+  }
+
+  .open-profile-img {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
-  header {
+  .header {
     left: 60px;
-    width: calc(100% - 280px);
+    width: calc(100% - 30px);
     gap: 40%;
   }
 

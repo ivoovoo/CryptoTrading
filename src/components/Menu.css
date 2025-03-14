@@ -101,13 +101,6 @@
   background-color: #151617;
 }
 
-.logo {
-  width: 34px;
-  padding-bottom: 47px;
-  padding-top: 20px;
-  cursor: pointer;
-}
-
 .logout-img {
   padding-right: 7.5px;
 }
@@ -151,6 +144,18 @@
   align-items: center;
   gap: 5px;
   margin-bottom: 20px;
+}
+
+.logo-menu {
+  font-size: 24px;
+  font-weight: 100;
+  cursor: pointer;
+  padding-bottom: 80px;
+}
+
+.logo-menu b {
+  font-weight: 700;
+  font-family: 'Rubik';
 }
 
 .sidebar .search-input {
@@ -215,5 +220,10 @@
 
   .burger-menu {
     display: block;
+  }
+
+  .logo-menu {
+    font-size: 21px;
+    padding-top: 15px;
   }
 }

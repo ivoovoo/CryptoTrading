@@ -351,6 +351,7 @@
   .portfolio-content {
     left: 90px;
     width: calc(100% - 120px);
+    padding-bottom: 80px;
   }
 
   .button-new-transaction {

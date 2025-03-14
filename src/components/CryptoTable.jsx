@@ -30,14 +30,11 @@ const CryptoTable = ({ data }) => {
             <th className='days-th'>7D</th>
             <th className='market-th'>
               <span>Market Cap</span>
-              <img className='info-circle' src='/img/info-circle.svg' alt='' />
             </th>
             <th className='volume-th'>
               <span>Volume</span>
-              <img className='info-circle' src='/img/info-circle.svg' alt='' />
             </th>
             <th className='last-th'>Last 7 Days</th>
-            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -63,16 +60,6 @@ const CryptoTable = ({ data }) => {
               <td>${coin.volume}</td>
               <td>
                 <img src={coin.chart} alt='chart' className='chart-img' />
-              </td>
-              <td>
-                <button className='action-btns'>
-                  <div className='menu-table'>
-                    <img src='/img/menu-table.svg' alt='' />
-                  </div>
-                  <div className='setting-table'>
-                    <img src='/img/setting.svg' alt='' />
-                  </div>
-                </button>
               </td>
             </tr>
           ))}

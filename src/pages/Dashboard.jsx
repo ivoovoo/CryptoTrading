@@ -84,7 +84,7 @@ const Dashboard = () => {
   ]
 
   return (
-    <div>
+    <div className='Dashboard-main'>
       <MenuButtom />
       <Menu />
       <Header title={'Dashboard'} />

@@ -216,10 +216,12 @@
   .prices-block {
     gap: 40%;
     left: 20px;
+    margin-bottom: 100px !important;
+    padding-bottom: 100px !important;
   }
 
   .card-prices {
-    width: 340px;
+    width: 370px;
     height: 260px;
     background-color: #151718;
     border-radius: 35px;
@@ -229,12 +231,48 @@
   .top-card-prices {
     display: flex;
     justify-content: space-between;
-    width: 290px;
+    width: 320px;
   }
 
   .coin-trending {
     display: flex;
-    width: 310px;
+    width: 340px;
+    height: 56px;
+    background-color: #212325;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .prices-block {
+    gap: 40%;
+    left: 20px;
+    margin-bottom: 100px !important;
+    padding-bottom: 100px !important;
+  }
+
+  .card-prices {
+    width: 315px;
+    height: 260px;
+    background-color: #151718;
+    border-radius: 35px;
+    padding-left: 16px;
+    box-sizing: border-box;
+  }
+  .top-card-prices {
+    display: flex;
+    justify-content: space-between;
+    width: 265px;
+  }
+
+  .coin-trending {
+    display: flex;
+    width: 285px;
     height: 56px;
     background-color: #212325;
     border-radius: 30px;
