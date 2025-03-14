@@ -4,7 +4,6 @@ import './App.css'
 import './App2.css'
 import Dashboard from './pages/Dashboard'
 import Portfolio from './pages/Portfolio'
-import MenuButtom from './components/MenuButtom'
 import Academy from './pages/Academy'
 import Watchlist from './pages/Watchlist'
 import Trading from './pages/Trading'
@@ -21,8 +20,6 @@ function App() {
         <Route path='/Watchlist' element={<Watchlist />} />
         <Route path='/Academy' element={<Academy />} />
         <Route path='/Trading' element={<Trading />} />
-        <Route path='/Second' element={<Second />} />
-        <Route path='/Home' element={<HomeBlockchain />} />
         <Route path='/Profile' element={<Second />} />
         <Route path='/Wallet' element={<HomeBlockchain />} />
       </Routes>
