@@ -23,6 +23,8 @@ function App() {
         <Route path='/Trading' element={<Trading />} />
         <Route path='/Second' element={<Second />} />
         <Route path='/Home' element={<HomeBlockchain />} />
+        <Route path='/Profile' element={<Second />} />
+        <Route path='/Wallet' element={<HomeBlockchain />} />
       </Routes>
     </Router>
   )
