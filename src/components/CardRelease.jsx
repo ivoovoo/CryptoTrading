@@ -12,9 +12,22 @@ const CardRelease = ({ content }) => {
   const swiperRef = useRef(null)
   const videoRefs = useRef([]) // Ссылки на видео
   const [playingVideo, setPlayingVideo] = useState(null) // Текущее воспроизводимое видео
+  const [isMobile, setIsMobile] = useState(false) // Для определения мобильного устройства
 
   useEffect(() => {
     setTimeout(() => setLoaded(true), 50)
+
+    // Проверяем ширину экрана
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768) // Устанавливаем isMobile в true, если ширина экрана <= 768px
+    }
+
+    handleResize() // Изначальная проверка
+    window.addEventListener('resize', handleResize) // Слушаем изменения размера окна
+
+    return () => {
+      window.removeEventListener('resize', handleResize) // Очистка слушателя
+    }
   }, [])
 
   // Функция Play/Pause
@@ -53,15 +66,18 @@ const CardRelease = ({ content }) => {
                 <img
                   src={data.image}
                   alt='Card Poster'
-                  className={`video-poster ${playingVideo === index ? 'hidden' : ''}`}
+                  className={`video-poster ${playingVideo === index ? 'hidden' : ''} ${
+                    isMobile ? 'mobile-hidden' : ''
+                  }`}
                 />
 
                 {/* Видео */}
                 <video
                   ref={el => (videoRefs.current[index] = el)}
-                  className='video-element'
+                  className={`video-element ${isMobile ? 'mobile-hidden' : ''}`}
                   src={data.video}
                   onPause={() => setPlayingVideo(null)}
+                  controls={false} // Без стандартных контролов
                 />
               </div>
 

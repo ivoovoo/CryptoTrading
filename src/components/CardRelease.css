@@ -388,6 +388,10 @@
     height: auto;
     padding: 12px;
   }
+
+  /* Скрытие видео и кнопки на мобильных устройствах */
+  @media (max-width: 768px) {
+  }
 }
 
 @media (max-width: 480px) {
