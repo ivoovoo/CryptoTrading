@@ -226,4 +226,10 @@
     font-size: 21px;
     padding-top: 15px;
   }
+
+  .search-button .search-img-menu {
+    padding-right: 3px;
+    width: 15px;
+    height: 15px;
+  }
 }

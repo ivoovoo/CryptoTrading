@@ -13,13 +13,17 @@ const Menu = () => {
     }
 
     const handleClickOutside = event => {
+      // Добавим проверку, чтобы не закрывать меню, если клик был внутри меню или бургер-меню
       if (isOpen && !event.target.closest('.sidebar') && !event.target.closest('.burger-menu')) {
         setIsOpen(false)
       }
     }
 
     const handleTouchStart = event => {
-      setTouchStartX(event.touches[0].clientX)
+      // Проверим, что свайп начинается в области меню или на бургер-меню
+      if (event.target.closest('.sidebar') || event.target.closest('.burger-menu')) {
+        setTouchStartX(event.touches[0].clientX)
+      }
     }
 
     const handleTouchEnd = event => {
@@ -27,9 +31,10 @@ const Menu = () => {
         const touchEndX = event.changedTouches[0].clientX
         const swipeDistance = touchEndX - touchStartX
 
-        if (swipeDistance > 50) {
+        // Увеличиваем минимальное расстояние для свайпа
+        if (swipeDistance > 100) {
           setIsOpen(true) // Свайп вправо — открыть меню
-        } else if (swipeDistance < -50) {
+        } else if (swipeDistance < -100) {
           setIsOpen(false) // Свайп влево — закрыть меню
         }
       }
@@ -76,7 +81,7 @@ const Menu = () => {
           <div className='search-block'>
             <input className='search-input' type='text' placeholder='Search your coins...' />
             <button className='search-button'>
-              <img src='/img/search.svg' className='search-img' alt='' />
+              <img src='/img/search.svg' className='search-img-menu' alt='' />
             </button>
           </div>
         )}
