@@ -78,6 +78,7 @@ const CardRelease = ({ content }) => {
                   src={data.video}
                   onPause={() => setPlayingVideo(null)}
                   controls={false} // Без стандартных контролов
+                  playsInline // Для предотвращения полноэкранного режима на мобильных устройствах
                 />
               </div>
 

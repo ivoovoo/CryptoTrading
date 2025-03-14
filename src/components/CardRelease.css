@@ -391,6 +391,28 @@
 
   /* Скрытие видео и кнопки на мобильных устройствах */
   @media (max-width: 768px) {
+    .video-container {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* Убедитесь, что видео не будет показываться в полноэкранном режиме */
+    .video-element {
+      object-fit: cover; /* Сохраняет видео в пределах карточки */
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Скрываем контролы и постер, если видео играет */
+    .video-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-poster {
+      display: block;
+    }
   }
 }
 
