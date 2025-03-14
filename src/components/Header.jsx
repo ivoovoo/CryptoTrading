@@ -2,7 +2,8 @@ import './Header.css'
 
 const Header = ({ title, isMobile }) => {
   return (
-    <div className='header'>
+    <div>
+      <div className='background-header'></div>
       <header>
         <div className='name-page'>
           <div className='title-page'>{title}</div>

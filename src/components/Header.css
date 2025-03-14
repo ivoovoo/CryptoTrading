@@ -7,7 +7,17 @@ header {
   top: 12px;
   width: calc(100% - 450px);
   z-index: 3;
-  background: #0d0d0df6; /* Полупрозрачный белый */
+}
+
+.background-header {
+  width: calc(100% - 260px);
+  left: 260px;
+  height: 80px;
+  top: 0;
+  background-color: #0d0d0def;
+  position: fixed;
+  height: 60px;
+  z-index: 2;
 }
 
 .title-page {
@@ -107,6 +117,16 @@ header {
     width: calc(100% - 190px);
   }
 
+  .background-header {
+    background-color: #0d0d0def;
+    width: calc(100%);
+    position: fixed;
+    height: 60px;
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
+
   .header-user {
     width: 400px;
   }
@@ -158,6 +178,16 @@ header {
   header {
     left: 90px;
     width: calc(100% - 135px);
+  }
+
+  .background-header {
+    background-color: #0d0d0def;
+    width: calc(100%);
+    position: fixed;
+    height: 60px;
+    left: 0;
+    top: 0;
+    z-index: 2;
   }
 
   .search-block {
@@ -218,6 +248,16 @@ header {
     left: 60px;
     width: calc(100% - 280px);
     gap: 40%;
+  }
+
+  .background-header {
+    background-color: #0d0d0def;
+    width: calc(100%);
+    position: fixed;
+    height: 60px;
+    left: 0;
+    top: 0;
+    z-index: 2;
   }
 
   .search-block {
