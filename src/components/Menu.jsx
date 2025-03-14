@@ -21,8 +21,8 @@ const Menu = () => {
     { name: 'Trading', img: '/img/trade.svg', path: '/Trading' },
     { name: 'Watchlist', img: '/img/eye.svg', path: '/Watchlist' },
     { name: 'Academy', img: '/img/book.svg', path: '/Academy' },
-    { name: 'Profile', img: '/img/user.svg', path: '/Second' },
-    { name: 'Wallet', img: '/img/wallet-2.svg', path: '/Home' },
+    { name: 'Wallet', img: '/img/user.svg', path: '/Wallet' },
+    { name: 'Profile', img: '/img/wallet-2.svg', path: '/Profile' },
   ]
 
   return (
