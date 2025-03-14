@@ -25,10 +25,27 @@ const CardRelease = ({ content }) => {
     handleResize() // Изначальная проверка
     window.addEventListener('resize', handleResize) // Слушаем изменения размера окна
 
-    return () => {
-      window.removeEventListener('resize', handleResize) // Очистка слушателя
+    // Добавляем обработчик кликов на документ для паузы видео
+    const handleDocumentClick = event => {
+      // Если клик был не по видео или кнопке, ставим видео на паузу
+      if (!event.target.closest('.video-wrapper') && !event.target.closest('.play-card-img')) {
+        if (playingVideo !== null) {
+          const video = videoRefs.current[playingVideo]
+          if (video) {
+            video.pause()
+            setPlayingVideo(null) // Сбрасываем воспроизводимое видео
+          }
+        }
+      }
     }
-  }, [])
+
+    document.addEventListener('click', handleDocumentClick)
+
+    return () => {
+      document.removeEventListener('click', handleDocumentClick) // Очистка обработчика
+      window.removeEventListener('resize', handleResize) // Очистка обработчика изменения размера
+    }
+  }, [playingVideo]) // Срабатывает, когда изменяется текущее воспроизводимое видео
 
   // Функция Play/Pause
   const togglePlay = index => {
@@ -85,7 +102,10 @@ const CardRelease = ({ content }) => {
               {/* Кнопка Play/Pause */}
               <button
                 className={playingVideo === index ? 'play-card-img' : 'pause-card-img'}
-                onClick={() => togglePlay(index)}
+                onClick={e => {
+                  e.stopPropagation() // Предотвращаем всплытие клика, чтобы не ставить на паузу при клике на кнопку
+                  togglePlay(index)
+                }}
               >
                 <img
                   className={playingVideo === index ? 'play-img' : 'pause-img'}
