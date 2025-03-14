@@ -12,18 +12,8 @@ const Menu = () => {
       setIsMobile(window.innerWidth <= 768)
     }
 
-    const handleClickOutside = event => {
-      // Добавим проверку, чтобы не закрывать меню, если клик был внутри меню или бургер-меню
-      if (isOpen && !event.target.closest('.sidebar') && !event.target.closest('.burger-menu')) {
-        setIsOpen(false)
-      }
-    }
-
     const handleTouchStart = event => {
-      // Проверим, что свайп начинается в области меню или на бургер-меню
-      if (event.target.closest('.sidebar') || event.target.closest('.burger-menu')) {
-        setTouchStartX(event.touches[0].clientX)
-      }
+      setTouchStartX(event.touches[0].clientX)
     }
 
     const handleTouchEnd = event => {
@@ -31,10 +21,8 @@ const Menu = () => {
         const touchEndX = event.changedTouches[0].clientX
         const swipeDistance = touchEndX - touchStartX
 
-        // Увеличиваем минимальное расстояние для свайпа
-        if (swipeDistance > 100) {
-          setIsOpen(true) // Свайп вправо — открыть меню
-        } else if (swipeDistance < -100) {
+        // Логика для закрытия меню при свайпе влево
+        if (swipeDistance < -100) {
           setIsOpen(false) // Свайп влево — закрыть меню
         }
       }
@@ -42,17 +30,15 @@ const Menu = () => {
     }
 
     window.addEventListener('resize', handleResize)
-    document.addEventListener('click', handleClickOutside)
     document.addEventListener('touchstart', handleTouchStart)
     document.addEventListener('touchend', handleTouchEnd)
 
     return () => {
       window.removeEventListener('resize', handleResize)
-      document.removeEventListener('click', handleClickOutside)
       document.removeEventListener('touchstart', handleTouchStart)
       document.removeEventListener('touchend', handleTouchEnd)
     }
-  }, [isOpen, touchStartX])
+  }, [touchStartX])
 
   const menuItems = [
     { name: 'Dashboard', img: '/img/user.svg', path: '/Dashboard' },

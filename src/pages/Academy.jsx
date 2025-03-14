@@ -82,7 +82,7 @@ const Academy = () => {
   ]
 
   return (
-    <div>
+    <div className='academy'>
       <MenuButtom />
       <Menu />
       <Header title={'Academy'} />
