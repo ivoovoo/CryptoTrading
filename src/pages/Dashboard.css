@@ -221,7 +221,7 @@
   }
 
   .card-prices {
-    width: 370px;
+    width: 377px;
     height: 260px;
     background-color: #151718;
     border-radius: 35px;
@@ -231,12 +231,12 @@
   .top-card-prices {
     display: flex;
     justify-content: space-between;
-    width: 320px;
+    width: 327px;
   }
 
   .coin-trending {
     display: flex;
-    width: 340px;
+    width: 347px;
     height: 56px;
     background-color: #212325;
     border-radius: 30px;

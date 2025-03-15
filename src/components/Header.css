@@ -258,7 +258,7 @@
 @media (max-width: 480px) {
   .header {
     left: 60px;
-    width: calc(100% - 30px);
+    width: calc(100% - 0px);
     gap: 40%;
   }
 
@@ -306,7 +306,7 @@
   }
 
   .avatar-user {
-    width: 37px;
+    width: 40px;
   }
 
   .name-user {
