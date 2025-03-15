@@ -46,7 +46,7 @@
 }
 
 .recording-content {
-  width: 171px;
+  width: 131px;
   height: 30px;
   background-color: #ffffff11;
   display: flex;
@@ -222,7 +222,7 @@
   }
 
   .recording-content {
-    width: 171px;
+    width: 131px;
     height: 30px;
   }
 
@@ -382,7 +382,7 @@
   }
 
   .recording-content {
-    width: 141px;
+    width: 111px;
     height: 22px;
   }
 
@@ -523,7 +523,7 @@
   }
 
   .recording-content {
-    width: 120px;
+    width: 90px;
     height: 18px;
   }
 
@@ -644,17 +644,17 @@
   }
 
   .live-Now {
-    width: 330px;
+    width: 350px;
   }
 
   .laptop-img {
-    width: 330px;
+    width: 350px;
   }
 
   .audio-content {
     top: 15px;
     left: 15px;
-    width: 300px;
+    width: 320px;
   }
 
   .you {
@@ -675,7 +675,7 @@
   }
 
   .recording-content {
-    width: 120px;
+    width: 90px;
     height: 18px;
   }
 
@@ -779,5 +779,51 @@
     height: 38px;
     letter-spacing: 0.2px;
     font-weight: 500;
+  }
+}
+
+@media (max-width: 360px) {
+  .live-Now {
+    width: 320px;
+  }
+
+  .laptop-img {
+    width: 320px;
+  }
+
+  .audio-content {
+    top: 15px;
+    left: 15px;
+    width: 290px;
+  }
+
+  .audio {
+    padding-left: 8px;
+    width: 260px;
+    height: 30px;
+    gap: 10.3px;
+  }
+
+  .audio-track {
+    margin-top: 120px;
+    gap: 8px;
+  }
+
+  .time-audio {
+    font-size: 7px;
+    padding-left: 0px;
+  }
+
+  .close {
+    width: 30px;
+    height: 30px;
+  }
+
+  .audio-sound {
+    width: 48px;
+  }
+
+  .audio-sound1 {
+    width: 26px;
   }
 }

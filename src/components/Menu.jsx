@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import './Menu.css'
+import styles from './Menu.module.css'
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
   const [touchStartX, setTouchStartX] = useState(null)
+  const [touchStartY, setTouchStartY] = useState(null)
 
   useEffect(() => {
     const handleResize = () => {
@@ -13,7 +14,9 @@ const Menu = () => {
     }
 
     const handleTouchStart = event => {
-      setTouchStartX(event.touches[0].clientX)
+      const touch = event.touches[0]
+      setTouchStartX(touch.clientX)
+      setTouchStartY(touch.clientY)
     }
 
     const handleTouchEnd = event => {
@@ -21,12 +24,18 @@ const Menu = () => {
         const touchEndX = event.changedTouches[0].clientX
         const swipeDistance = touchEndX - touchStartX
 
-        // Логика для закрытия меню при свайпе влево
         if (swipeDistance < -100) {
-          setIsOpen(false) // Свайп влево — закрыть меню
+          setIsOpen(false) // Закрытие при свайпе влево
+        } else if (
+          swipeDistance > 100 &&
+          touchStartX < 50 &&
+          Math.abs(touchStartY - event.changedTouches[0].clientY) < 50
+        ) {
+          setIsOpen(true) // Открытие при свайпе вправо только если свайп начался в углу
         }
       }
       setTouchStartX(null)
+      setTouchStartY(null)
     }
 
     window.addEventListener('resize', handleResize)
@@ -52,37 +61,37 @@ const Menu = () => {
 
   return (
     <>
-      <button className='burger-menu' onClick={() => setIsOpen(!isOpen)}>
-        <span className={isOpen ? 'burger-line open' : 'burger-line'}></span>
-        <span className={isOpen ? 'burger-line open' : 'burger-line'}></span>
-        <span className={isOpen ? 'burger-line open' : 'burger-line'}></span>
+      <button className={styles.burgerMenu} onClick={() => setIsOpen(!isOpen)}>
+        <span className={`${styles.burgerLine} ${isOpen ? styles.burgerLineOpen : ''}`}></span>
+        <span className={`${styles.burgerLine} ${isOpen ? styles.burgerLineOpen : ''}`}></span>
+        <span className={`${styles.burgerLine} ${isOpen ? styles.burgerLineOpen : ''}`}></span>
       </button>
 
-      <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-        <a className='logo-menu'>
+      <div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
+        <a className={styles.logoMenu}>
           <b>Q</b> BLOCKCHAIN
         </a>
 
         {isMobile && (
-          <div className='search-block'>
-            <input className='search-input' type='text' placeholder='Search your coins...' />
-            <button className='search-button'>
-              <img src='/img/search.svg' className='search-img-menu' alt='' />
+          <div className={styles.searchBlock}>
+            <input className={styles.searchInput} type='text' placeholder='Search your coins...' />
+            <button className={styles.searchButton}>
+              <img src='/img/search.svg' className={styles.searchImgMenu} alt='' />
             </button>
           </div>
         )}
 
-        <nav className='menu'>
+        <nav className={styles.menu}>
           {menuItems.map(item => (
             <NavLink
               to={item.path}
               key={item.name}
-              className={({ isActive }) => `menu-item ${isActive ? 'active' : ''}`}
+              className={({ isActive }) => `${styles.menuItem} ${isActive ? styles.active : ''}`}
               onClick={() => setIsOpen(false)}
             >
               {({ isActive }) => (
                 <>
-                  <div className={isActive ? 'active-board-img' : 'board-img'}>
+                  <div className={isActive ? styles.activeBoardImg : styles.boardImg}>
                     <img src={item.img} alt={item.name} />
                   </div>
                   <span>{item.name}</span>
@@ -92,9 +101,9 @@ const Menu = () => {
           ))}
         </nav>
 
-        <div className='bottom-menu'>
-          <div className='menu-item' onClick={() => setIsOpen(false)}>
-            <img className='logout-img' src='/img/logout.svg' alt='Logout' />
+        <div className={styles.bottomMenu}>
+          <div className={styles.menuItem} onClick={() => setIsOpen(false)}>
+            <img className={styles.logoutImg} src='/img/logout.svg' alt='Logout' />
             <span>Logout</span>
           </div>
         </div>

@@ -104,12 +104,6 @@ const Academy = () => {
                     <div className='recording-center'></div>
                   </button>
                   <div className='recording-text'>Recording...</div>
-                  <button className='pause'>
-                    <img src='/img/pause.svg' alt='' />
-                  </button>
-                  <button className='stop'>
-                    <img src='/img/stop.svg' alt='' />
-                  </button>
                 </div>
               </div>
               <div className='audio-track'>

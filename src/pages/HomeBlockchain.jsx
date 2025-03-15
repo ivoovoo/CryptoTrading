@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import HeaderChain from '../components/layout/HeaderChain'
 import TableRows from '../components/TableRows'
 import '../components/HomeBlockchain.css'
-import MenuBottom2 from '../components/MenuBottom2'
+import MenuBottom from '../components/MenuButtom'
+import Menu from '../components/Menu'
 
 function HomeBlockchain() {
   const [selected, setSelected] = useState('option1') // Начальное значение
@@ -11,7 +12,9 @@ function HomeBlockchain() {
     <div className='BLOCKCHAIN'>
       <div className='container'>
         <HeaderChain />
-        <MenuBottom2 />
+        <Menu />
+        <MenuBottom />
+
         <div className='content-block'>
           <section className='hero-block'>
             <div className='content-hero'>

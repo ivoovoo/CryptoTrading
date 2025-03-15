@@ -2,7 +2,8 @@ import React from 'react'
 import HeaderSecond from '../components/layout/HeaderSecond'
 import Table2 from '../components/Table2'
 import '../components/second.css'
-import MenuBottom2 from '../components/MenuBottom2'
+import MenuBottom from '../components/MenuButtom'
+import Menu from '../components/Menu'
 
 const Second = () => {
   const tableData = [
@@ -107,7 +108,8 @@ const Second = () => {
     <div className='BLOCKCHAIN'>
       <div className='container'>
         <div>
-          <MenuBottom2 />
+          <Menu />
+          <MenuBottom />
           <HeaderSecond />
           <div>
             <div className='QR-block'>
