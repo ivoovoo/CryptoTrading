@@ -36,7 +36,7 @@
   background-color: #1a1d1e;
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 4px;
   align-items: center;
   height: 32px;
 }
@@ -50,7 +50,7 @@
 }
 
 .btn-more {
-  width: 81px;
+  padding: 0px 12px;
 }
 .btn-add:hover,
 .btn-share:hover,

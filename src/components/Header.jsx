@@ -25,8 +25,6 @@ const Header = ({ title, isMobile }) => {
           </button>
           <div className='profile-user'>
             <img src='/img/avatar-user.svg' className='avatar-user' alt='' />
-            <div className='name-user'>Alexim</div>
-            <img className='open-profile-img' src='/img/open-profile.svg' alt='' />
           </div>
         </div>
       </header>

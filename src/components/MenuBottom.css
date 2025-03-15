@@ -39,3 +39,7 @@
 .menu-bottom-button:hover {
   filter: blur(1px);
 }
+
+.menu-bottom-link.active {
+  filter: blur(1px); /* Размытие активной ссылки */
+}

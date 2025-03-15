@@ -1,22 +1,22 @@
 import React from 'react'
 import './CryptoTable.css'
 
-const CryptoTable = ({ data }) => {
+const CryptoTable = ({ data, btns }) => {
   return (
     <div className='crypto-table-container'>
       <div className='crypto-table-buttons'>
         <div className='crypto-table-buttonsContent'>
           <button className='btn-add'>
             <img src='/img/add-coins.svg' alt='' />
-            Add coins
+            {btns.firstBtn}
           </button>
           <button className='btn-share'>
             <img src='/img/share.svg' alt='' />
-            Share
+            {btns.secondBtn}
           </button>
           <button className='btn-more'>
             <img src='/img/more.svg' alt='' />
-            More
+            {btns.thirdBtn}
           </button>
         </div>
       </div>

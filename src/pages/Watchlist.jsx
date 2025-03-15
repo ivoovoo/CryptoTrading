@@ -6,6 +6,11 @@ import Menu from '../components/Menu'
 import MenuButtom from '../components/MenuButtom'
 
 const Watchlist = () => {
+  const btns = {
+    firstBtn: 'Add coins',
+    secondBtn: 'Share',
+    thirdBtn: 'More',
+  }
   const data = [
     {
       id: 1,
@@ -151,7 +156,7 @@ const Watchlist = () => {
             </button>
           </div>
         </div>
-        <CryptoTable data={data} />
+        <CryptoTable data={data} btns={btns} />
       </div>
     </div>
   )
