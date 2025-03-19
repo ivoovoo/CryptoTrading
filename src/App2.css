@@ -8,6 +8,7 @@ body {
   max-width: 1295px;
   margin-left: 405px;
   background-color: #fff;
+  padding-right: 20px;
 }
 
 @keyframes fadeIn {

@@ -79,9 +79,10 @@
 }
 
 /* Добавляем адаптивность */
-@media (max-width: 1282px) {
+@media (max-width: 1500px) {
   .tab {
     overflow: auto;
+    width: calc(100% - 20px);
   }
 }
 

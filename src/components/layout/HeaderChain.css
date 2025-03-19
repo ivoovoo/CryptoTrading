@@ -164,22 +164,20 @@ li {
 
 @media (max-width: 1024px) {
   .header2 {
-    margin-left: 20px;
+    margin-left: 30px;
     width: calc(100% - 190px);
   }
 }
 
 @media (max-width: 768px) {
   .header2 {
-    margin-left: 90px;
+    margin-left: 30px;
     width: calc(100% - 20px);
   }
 }
 
 @media (max-width: 480px) {
   .header2 {
-    margin-left: 60px;
-    width: calc(100% - 0px);
-    gap: 40%;
+    margin-left: 30px;
   }
 }
