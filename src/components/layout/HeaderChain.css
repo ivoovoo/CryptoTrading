@@ -13,6 +13,8 @@ li {
   justify-content: space-between;
   flex-wrap: wrap;
   height: 80px;
+  margin-left: 405px;
+  width: 1295px;
 }
 
 .header2 nav {
@@ -150,5 +152,34 @@ li {
 
   .header2 nav a {
     font-size: 8px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header2 {
+    margin-left: 300px;
+    width: calc(100% - 310px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .header2 {
+    margin-left: 20px;
+    width: calc(100% - 190px);
+  }
+}
+
+@media (max-width: 768px) {
+  .header2 {
+    margin-left: 90px;
+    width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .header2 {
+    margin-left: 60px;
+    width: calc(100% - 0px);
+    gap: 40%;
   }
 }

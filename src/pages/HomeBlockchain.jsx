@@ -4,17 +4,19 @@ import TableRows from '../components/TableRows'
 import '../components/HomeBlockchain.css'
 import MenuBottom from '../components/MenuButtom'
 import Menu from '../components/Menu'
+import useBodyClass from '../hooks/useBodyClass'
+import Footer from '../components/layout/Footer'
 
 function HomeBlockchain() {
   const [selected, setSelected] = useState('option1') // Начальное значение
+  useBodyClass()
 
   return (
     <div className='BLOCKCHAIN'>
+      <HeaderChain />
+      <Menu />
+      <MenuBottom />
       <div className='container'>
-        <HeaderChain />
-        <Menu />
-        <MenuBottom />
-
         <div className='content-block'>
           <section className='hero-block'>
             <div className='content-hero'>
@@ -161,6 +163,7 @@ function HomeBlockchain() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

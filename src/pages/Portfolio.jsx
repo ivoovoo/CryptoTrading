@@ -5,6 +5,7 @@ import './Portfolio.css'
 import React from 'react'
 import Menu from '../components/Menu'
 import MenuButtom from '../components/MenuButtom'
+import useBodyClass from '../hooks/useBodyClass'
 
 const Portfolio = () => {
   const data = [
@@ -86,6 +87,8 @@ const Portfolio = () => {
       profitLoss: `+$${0.0}`,
     },
   ]
+
+  useBodyClass()
 
   return (
     <div>

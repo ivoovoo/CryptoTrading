@@ -4,6 +4,8 @@ import Table2 from '../components/Table2'
 import '../components/second.css'
 import MenuBottom from '../components/MenuButtom'
 import Menu from '../components/Menu'
+import useBodyClass from '../hooks/useBodyClass'
+import Footer from '../components/layout/Footer'
 
 const Second = () => {
   const tableData = [
@@ -104,13 +106,15 @@ const Second = () => {
       message: 'TNw6v3yHUifFIkbW...',
     },
   ]
+  useBodyClass()
   return (
     <div className='BLOCKCHAIN'>
+      <HeaderSecond />
       <div className='container'>
         <div>
           <Menu />
           <MenuBottom />
-          <HeaderSecond />
+
           <div>
             <div className='QR-block'>
               <img className='qr-code' src='/img/QR.svg' alt='' />
@@ -150,6 +154,7 @@ const Second = () => {
         </div>
         <Table2 data={tableData} />
       </div>
+      <Footer />
     </div>
   )
 }

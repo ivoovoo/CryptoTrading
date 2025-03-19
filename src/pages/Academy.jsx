@@ -4,6 +4,7 @@ import './Academy.css'
 import CardRelease from '../components/CardRelease'
 import Menu from '../components/Menu'
 import MenuButtom from '../components/MenuButtom'
+import useBodyClass from '../hooks/useBodyClass'
 
 const Academy = () => {
   const cardsData = [
@@ -77,9 +78,11 @@ const Academy = () => {
       video: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
       date: 'Sep 2, 2022',
       duration: '5m',
-      id: 8, // исправлен повторяющийся id
+      id: 8,
     },
   ]
+
+  useBodyClass()
 
   return (
     <div className='academy'>

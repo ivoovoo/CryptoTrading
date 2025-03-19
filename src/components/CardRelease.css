@@ -4,7 +4,7 @@
   width: 265px;
 }
 
-.cards-carousel2 {
+.cards-carousel4 {
   position: absolute;
   left: 355px;
   top: 155px;
@@ -215,7 +215,7 @@
 }
 
 @media (max-width: 1200px) {
-  .cards-carousel2 {
+  .cards-carousel4 {
     left: 300px;
     width: calc(100% - 200px);
   }
@@ -225,7 +225,7 @@
 }
 
 @media (max-width: 1024px) {
-  .cards-carousel2 {
+  .cards-carousel4 {
     left: 60px;
     width: calc(100% - 60px);
   }
@@ -293,7 +293,7 @@
 }
 
 @media (max-width: 768px) {
-  .cards-carousel2 {
+  .cards-carousel4 {
     left: 40px;
     width: calc(100% - 40px);
   }
@@ -412,7 +412,7 @@
 }
 
 @media (max-width: 480px) {
-  .cards-carousel2 {
+  .cards-carousel4 {
     left: 30px;
     gap: 40%;
     width: calc(100% - 30px);
@@ -424,7 +424,7 @@
 }
 
 @media (max-width: 380px) {
-  .cards-carousel2 {
+  .cards-carousel4 {
     left: 30px;
     gap: 40%;
     width: calc(100% - 0px);

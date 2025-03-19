@@ -14,7 +14,7 @@ const CardsCarousel = ({ coins }) => {
       freeMode={true}
       pagination={{ clickable: true }}
       modules={[FreeMode, Pagination]}
-      className='cards-carousel'
+      className='cards-carouse'
     >
       {coins.map((coin, index) => (
         <SwiperSlide key={index} className='topCoin-card'>

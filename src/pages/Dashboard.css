@@ -12,6 +12,14 @@
   padding-top: 18px;
 }
 
+.text-green {
+  padding-top: 38px;
+}
+
+.text-red {
+  padding-top: 38px;
+}
+
 .prices {
   display: flex;
   flex-wrap: wrap;
@@ -25,14 +33,23 @@
   display: flex;
   gap: 18px;
 }
-.card-prices {
+.card-prices-closed,
+.card-prices-opened {
   width: 551px;
-  height: 276px;
   background-color: #151718;
   border-radius: 35px;
   padding-left: 16px;
   box-sizing: border-box;
 }
+
+.card-prices-closed {
+  height: 276px !important;
+}
+
+.card-prices-opened {
+  height: 716px !important;
+}
+
 .trending-title {
   color: #fff;
   font-size: 22px;
@@ -79,6 +96,7 @@
   color: #77ed91;
   font-size: 14px;
 }
+
 .subname-coin-prices {
   font-size: 12px;
   color: #a1a1a1;
@@ -92,15 +110,41 @@
   align-items: center;
 }
 
+.cards-carousel1,
+.cards-carousel2,
+.cards-carousel3 {
+  position: absolute;
+  left: 355px;
+  width: calc(100% - 355px);
+  overflow-x: hidden;
+  transition: top 0.3s ease-in-out;
+}
+
+.cards-carousel1 {
+  top: 525px !important;
+}
+
+.cards-carousel2 {
+  top: 945px !important;
+}
+
+.cards-carousel3 {
+  top: 945px !important;
+}
+
 @media (max-width: 1468px) {
-  .card-prices {
-    width: 451px;
-    height: 276px;
+  .card-prices-closed,
+  .card-prices-opened {
+    width: 451px !important;
     background-color: #151718;
     border-radius: 35px;
     padding-left: 16px;
     box-sizing: border-box;
   }
+  .card-prices-closed {
+    height: 276px;
+  }
+
   .top-card-prices {
     display: flex;
     justify-content: space-between;
@@ -127,13 +171,17 @@
     flex-direction: column;
   }
 
-  .card-prices {
-    width: 651px;
-    height: 276px;
+  .card-prices-closed,
+  .card-prices-opened {
+    width: 651px !important;
     background-color: #151718;
     border-radius: 35px;
     padding-left: 16px;
     box-sizing: border-box;
+  }
+
+  .card-prices-closed {
+    height: 276px;
   }
   .top-card-prices {
     display: flex;
@@ -153,12 +201,32 @@
     box-sizing: border-box;
     margin-bottom: 7px;
   }
+
+  .cards-carousel1 {
+    top: 810px !important;
+  }
+
+  .cards-carousel2 {
+    top: 1245px !important;
+  }
+
+  .cards-carousel3 {
+    top: 1690px !important;
+    padding-bottom: 40px;
+  }
 }
 
 @media (max-width: 1200px) {
   .prices-block {
     left: 300px;
     width: calc(100% - 310px);
+  }
+
+  .cards-carousel1,
+  .cards-carousel2,
+  .cards-carousel3 {
+    left: 300px;
+    width: calc(100% - 300px);
   }
 }
 
@@ -167,12 +235,26 @@
     left: 60px;
     width: calc(100% - 190px);
   }
+
+  .cards-carousel1,
+  .cards-carousel2,
+  .cards-carousel3 {
+    left: 60px;
+    width: calc(100% - 60px);
+  }
 }
 
 @media (max-width: 768px) {
   .prices-block {
     left: 40px;
     width: calc(100% - 135px);
+  }
+
+  .cards-carousel1,
+  .cards-carousel2,
+  .cards-carousel3 {
+    left: 40px;
+    width: calc(100% - 40px);
   }
 
   .cards-prices {
@@ -184,14 +266,19 @@
     font-size: 18px;
   }
 
-  .card-prices {
-    width: 433px;
-    height: 276px;
+  .card-prices-closed,
+  .card-prices-opened {
+    width: 433px !important;
     background-color: #151718;
     border-radius: 35px;
     padding-left: 16px;
     box-sizing: border-box;
   }
+
+  .card-prices-closed {
+    height: 276px;
+  }
+
   .top-card-prices {
     display: flex;
     justify-content: space-between;
@@ -220,13 +307,24 @@
     padding-bottom: 100px !important;
   }
 
-  .card-prices {
-    width: 377px;
-    height: 260px;
+  .cards-carousel1,
+  .cards-carousel2,
+  .cards-carousel3 {
+    left: 20px;
+    width: calc(100% - 30px);
+  }
+
+  .card-prices-closed,
+  .card-prices-opened {
+    width: 377px !important;
     background-color: #151718;
     border-radius: 35px;
     padding-left: 16px;
     box-sizing: border-box;
+  }
+
+  .card-prices-closed {
+    height: 260px;
   }
   .top-card-prices {
     display: flex;
@@ -256,14 +354,19 @@
     padding-bottom: 100px !important;
   }
 
-  .card-prices {
-    width: 315px;
-    height: 260px;
+  .card-prices-closed,
+  .card-prices-opened {
+    width: 315px !important;
     background-color: #151718;
     border-radius: 35px;
     padding-left: 16px;
     box-sizing: border-box;
   }
+
+  .card-prices-closed {
+    height: 260px;
+  }
+
   .top-card-prices {
     display: flex;
     justify-content: space-between;
@@ -281,5 +384,17 @@
     padding: 0px 15px;
     box-sizing: border-box;
     margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .cards-carousel {
+    width: calc(90%);
+  }
+}
+
+@media (max-width: 340px) {
+  .cards-carousel {
+    width: 340px;
   }
 }

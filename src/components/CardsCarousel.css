@@ -1,11 +1,3 @@
-.cards-carousel {
-  position: absolute;
-  left: 355px; /* Отступ от левого края */
-  top: 525px;
-  width: calc(100% - 355px);
-  overflow-x: hidden;
-}
-
 .topCoin-card {
   width: 367.5px;
   height: 298px;

@@ -83,7 +83,7 @@ const CardRelease = ({ content }) => {
         freeMode={true}
         pagination={{ clickable: true }}
         modules={[FreeMode, Pagination]}
-        className='cards-carousel2'
+        className='cards-carousel4'
         onSlideChange={handleSlideChange} // Слушаем смену слайда
       >
         {content.map((data, index) => (
